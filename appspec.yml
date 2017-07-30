@@ -6,20 +6,17 @@ files:
 hooks: 
   AfterInstall: 
     - 
-      commands:
-        - echo done
+      commands: post_install.sh
       runas: ec2-user
       timeout: 600
   ApplicationStart: 
     - 
-      commands: 
-        - npm start
+      location: run.sh
       runas: ec2-user
       timeout: 120
   ApplicationStop: 
     - 
-      commands: 
-        - npm stop
+      location: stop.sh
       runas: ec2-user
       timeout: 120
   BeforeInstall: 
@@ -29,8 +26,7 @@ hooks:
       timeout: 300
   ValidateService: 
     - 
-      commands: 
-        - npm start
+      location: validation.sh
       runas: ec2-user
       timeout: 60
 os: linux
