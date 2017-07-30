@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Starting Install
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - cd myTestApp
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - app.js
