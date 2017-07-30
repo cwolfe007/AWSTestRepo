@@ -1,40 +1,45 @@
-version: 0.2
-
-os: 
-  linux
-files:
-- source: 
-  /
- destination: 
-  /home/ec2-user/my-app
-
-permissions:
-  - object: 
-    /
-   pattern: 
-    "**"
-   owner: 
-    ec2-user
-   group: e
-    c2-user
-
-hooks:
-ApplicationStop:
-   - location: bin/app-stop
-     timeout: 10
-     runas: ec2-user
-
-AfterInstall:
-   - location: bin/install-pkgs
-     timeout: 1200
-     runas: ec2-user
-
-ApplicationStart:
-   - location: bin/app-start
-     timeout: 60
-     runas: ec2-user
-
-ValidateService:
-   - location: bin/app-validate
-     timeout: 10
-     runas: ec2-user
+--- 
+files: 
+  - 
+    destination: /home/ec2-user/node
+    source: /
+hooks: 
+  AfterInstall: 
+    - 
+      commands:
+        - echo done
+      runas: ec2-user
+      timeout: 600
+  ApplicationStart: 
+    - 
+      commands: 
+        - npm start
+      runas: ec2-user
+      timeout: 120
+  ApplicationStop: 
+    - 
+      commands: 
+        - npm stop
+      runas: ec2-user
+      timeout: 120
+  BeforeInstall: 
+    - 
+      location: install.sh
+      runas: root
+      timeout: 300
+  ValidateService: 
+    - 
+      commands: 
+        - npm start
+      runas: ec2-user
+      timeout: 60
+os: linux
+permissions: 
+  - 
+    group: ec2-user
+    object: /home/ec2-user
+    owner: ec2-user
+    type: 
+      - directory
+      - file
+version: 0.0
