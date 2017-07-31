@@ -2,31 +2,31 @@
 files: 
   - 
     destination: /home/ec2-user/node
-    source: /AWSTestRepo/Scripts
+    source: /
 hooks: 
   AfterInstall: 
     - 
-      commands: post_install.sh
+      location: /Scripts/run.shpost_install.sh
       runas: ec2-user
       timeout: 600
   ApplicationStart: 
     - 
-      location: /home/ec2-user/node/run.sh
+      location: /Scripts/run.sh
       runas: ec2-user
       timeout: 120
   ApplicationStop: 
     - 
-      location: /home/ec2-user/node/stop.sh
+      location: /Scripts/stop.sh
       runas: ec2-user
       timeout: 120
   BeforeInstall: 
     - 
-      location: /home/ec2-user/node/install.sh
+      location: /Scripts/install.sh
       runas: root
       timeout: 300
   ValidateService: 
     - 
-      location: /home/ec2-user/node/validation.sh
+      location: /Scripts/validation.sh
       runas: ec2-user
       timeout: 60
 os: linux
