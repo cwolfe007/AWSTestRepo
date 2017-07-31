@@ -2,7 +2,7 @@
 files: 
   - 
     destination: /home/ec2-user/node
-    source: /Scripts
+    source: /AWSTestRepo/Scripts
 hooks: 
   AfterInstall: 
     - 
