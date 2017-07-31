@@ -11,22 +11,22 @@ hooks:
       timeout: 600
   ApplicationStart: 
     - 
-      location: run.sh
+      location: /home/ec2-user/node/run.sh
       runas: ec2-user
       timeout: 120
   ApplicationStop: 
     - 
-      location: stop.sh
+      location: /home/ec2-user/node/stop.sh
       runas: ec2-user
       timeout: 120
   BeforeInstall: 
     - 
-      location: install.sh
+      location: /home/ec2-user/node/install.sh
       runas: root
       timeout: 300
   ValidateService: 
     - 
-      location: validation.sh
+      location: /home/ec2-user/node/validation.sh
       runas: ec2-user
       timeout: 60
 os: linux
