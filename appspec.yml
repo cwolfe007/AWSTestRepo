@@ -6,27 +6,27 @@ files:
 hooks: 
   AfterInstall: 
     - 
-      location: Scripts/run.shpost_install.sh
+      location: /home/ec2-user/node//home/ec2-user/node/Scripts//run.shpost_install.sh
       runas: ec2-user
       timeout: 600
   ApplicationStart: 
     - 
-      location: Scripts/run.sh
+      location: /home/ec2-user/node/Scripts//run.sh
       runas: ec2-user
       timeout: 120
   ApplicationStop: 
     - 
-      location: Scripts/stop.sh
+      location: /home/ec2-user/node/Scripts//stop.sh
       runas: ec2-user
       timeout: 120
   BeforeInstall: 
     - 
-      location: Scripts/install.sh
+      location: /home/ec2-user/node/Scripts//install.sh
       runas: root
       timeout: 300
   ValidateService: 
     - 
-      location: Scripts/validation.sh
+      location: /home/ec2-user/node/Scripts//validation.sh
       runas: ec2-user
       timeout: 60
 os: linux
