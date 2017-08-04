@@ -6,27 +6,27 @@ files:
 hooks: 
   AfterInstall: 
     - 
-      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/Scripts/run.shpost_install.sh
+      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/AWSTestRepo/Scripts/run.shpost_install.sh
       runas: ec2-user
       timeout: 600
   ApplicationStart: 
     - 
-      location: /opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/Scripts/run.sh
+      location: /opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/AWSTestRepo/Scripts/run.sh
       runas: ec2-user
       timeout: 120
   ApplicationStop: 
     - 
-      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/Scripts/stop.sh
+      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/AWSTestRepo/Scripts/stop.sh
       runas: ec2-user
       timeout: 120
   BeforeInstall: 
     - 
-      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/Scripts/install.sh
+      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/AWSTestRepo/Scripts/install.sh
       runas: root
       timeout: 300
   ValidateService: 
     - 
-      location: /opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/Scripts/validation.sh
+      location: /opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/AWSTestRepo/Scripts/validation.sh
       runas: ec2-user
       timeout: 60
 os: linux
