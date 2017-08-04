@@ -1,32 +1,32 @@
 --- 
 files: 
   - 
-    destination: /home/ec2-user/node
+    destination: /opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archive/
     source: /
 hooks: 
   AfterInstall: 
     - 
-      location: /home/ec2-user/node//home/ec2-user/node/Scripts//run.shpost_install.sh
+      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archiveScripts/run.shpost_install.sh
       runas: ec2-user
       timeout: 600
   ApplicationStart: 
     - 
-      location: /home/ec2-user/node/Scripts//run.sh
+      location: /opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archiveScripts/run.sh
       runas: ec2-user
       timeout: 120
   ApplicationStop: 
     - 
-      location: /home/ec2-user/node/Scripts//stop.sh
+      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archivecripts/stop.sh
       runas: ec2-user
       timeout: 120
   BeforeInstall: 
     - 
-      location: /home/ec2-user/node/Scripts//install.sh
+      location: opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archiveScripts/install.sh
       runas: root
       timeout: 300
   ValidateService: 
     - 
-      location: /home/ec2-user/node/Scripts//validation.sh
+      location: /opt/codedeploy-agent/deployment-root/2c42196a-7620-4cf7-bcaf-6c6382811448/d-81WJUF9WN/deployment-archiveScripts/validation.sh
       runas: ec2-user
       timeout: 60
 os: linux
