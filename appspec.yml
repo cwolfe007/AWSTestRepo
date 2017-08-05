@@ -1,7 +1,7 @@
 --- 
 
 files: 
-  - source: source
+  - source: /
     destination: /home/ec2-user/web
     
 hooks: 
@@ -22,7 +22,7 @@ hooks:
       timeout: 120
   BeforeInstall: 
     - 
-      location: Scripts/install.sh
+      location: Scripts/b4install.sh
       runas: root
       timeout: 300
   ValidateService: 
