@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ../myTestApp
+cd myTestApp
 npm install
