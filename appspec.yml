@@ -1,7 +1,7 @@
 --- 
 files: 
   - source: /
-    destination: $DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive/
+    destination: /tmp/epub/
     
 hooks: 
   AfterInstall: 
