@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ../myTestApp
+cd cd $DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive/myTestApp
 npm stop
