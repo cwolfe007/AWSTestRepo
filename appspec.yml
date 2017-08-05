@@ -1,7 +1,7 @@
 --- 
 files: 
   - source: /
-    destination: /newfolder/webapp/home
+    
     
 hooks: 
   AfterInstall: 
