@@ -1,3 +1,3 @@
 #!/bin/bash
 cd cd $DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive/myTestApp
-npm stop
+/home/ec2-user/.nvm/versions/node/v4.4.5/bin/npm stop
