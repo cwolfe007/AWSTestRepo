@@ -1,7 +1,8 @@
 --- 
+
 files: 
   - source: /
-    destination: /tmp/epub/
+    destination: /tmp/
     
 hooks: 
   AfterInstall: 
