@@ -1,8 +1,8 @@
 --- 
 
 files: 
-  - source: /
-    destination: /tmp/
+  - source: source
+    destination: /home/ec2-user/web
     
 hooks: 
   AfterInstall: 
@@ -23,7 +23,7 @@ hooks:
   BeforeInstall: 
     - 
       location: Scripts/install.sh
-      runas: ec2-user
+      runas: root
       timeout: 300
   ValidateService: 
     - 
