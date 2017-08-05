@@ -22,7 +22,7 @@ hooks:
   BeforeInstall: 
     - 
       location: Scripts/install.sh
-      runas: root
+      runas: ec2-user
       timeout: 300
   ValidateService: 
     - 
