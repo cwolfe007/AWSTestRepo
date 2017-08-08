@@ -25,11 +25,7 @@ hooks:
       location: Scripts/b4install.sh
       runas: root
       timeout: 300
-  ValidateService: 
-    - 
-      location: Scripts/validation.sh
-      runas: ec2-user
-      timeout: 60
+
 os: linux
 permissions: 
   - 
