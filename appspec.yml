@@ -13,7 +13,7 @@ hooks:
   ApplicationStart: 
     - 
       location: Scripts/run.sh
-      runas: root
+      runas: ec2-user
       
   ApplicationStop: 
     - 
@@ -23,7 +23,7 @@ hooks:
   BeforeInstall: 
     - 
       location: Scripts/b4install.sh
-      runas: root
+      runas: ec2-user
       timeout: 300
 
 os: linux
