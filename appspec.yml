@@ -23,7 +23,7 @@ hooks:
   BeforeInstall: 
     - 
       location: Scripts/b4install.sh
-      runas: ec2-user
+      runas: root
       timeout: 300
 
 os: linux
