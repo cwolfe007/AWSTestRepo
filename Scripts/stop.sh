@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd ~/web/myTestApp; npm stop;
+\rm -rf /home/ec2-user/web/ && mkdir /home/ec2-user/web/;
 
 echo "ran stop"
