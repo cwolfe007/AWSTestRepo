@@ -29,10 +29,8 @@ hooks:
 os: linux
 permissions: 
   - 
-    group: ec2-user
+    pattern: "**"
     object: /
-    owner: ec2-user
-    mode: 1777
     type: 
       - directory
       - file
