@@ -13,7 +13,7 @@ hooks:
   ApplicationStart: 
     - 
       location: Scripts/run.sh
-      runas: ec2-user
+      runas: root
       
   ApplicationStop: 
     - 
