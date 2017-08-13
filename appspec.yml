@@ -30,7 +30,7 @@ os: linux
 permissions: 
   - 
     group: ec2-user
-    object: /home/ec2-user
+    object: /
     owner: ec2-user
     type: 
       - directory
