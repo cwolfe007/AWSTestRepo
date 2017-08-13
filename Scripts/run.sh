@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /home/ec2-user/web/myTestApp;printenv | grep NVM_BIN;$NVM_BIN/npm install -g forever;$NVM_BIN/forever start ./bin/www;
+cd /home/ec2-user/web/myTestApp;printenv | grep NVM_BIN;/home/ec2-user/.nvm/versions/node/v4.4.5/bin/npm install -g forever;/home/ec2-user/.nvm/versions/node/v4.4.5/bin/forever start ./bin/www;
