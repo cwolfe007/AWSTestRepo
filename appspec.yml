@@ -5,21 +5,6 @@ files:
     destination: /home/ec2-user/web
     
 hooks: 
-  AfterInstall: 
-    - 
-      location: Scripts/post_install.sh
-      runas: root
-      timeout: 600
-  ApplicationStart: 
-    - 
-      location: Scripts/run.sh
-      runas: ec2-user
-      
-  ApplicationStop: 
-    - 
-      location: Scripts/stop.sh
-      runas: root
-      timeout: 120
   BeforeInstall: 
     - 
       location: Scripts/b4install.sh
