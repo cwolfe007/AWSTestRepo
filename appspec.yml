@@ -13,7 +13,7 @@ hooks:
   ApplicationStart: 
     - 
       location: Scripts/run.sh
-      runas: root
+      runas: ec2-user
       
   ApplicationStop: 
     - 
@@ -32,6 +32,7 @@ permissions:
     group: ec2-user
     object: /
     owner: ec2-user
+    mode: 1777
     type: 
       - directory
       - file
